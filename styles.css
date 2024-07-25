@@ -1,0 +1,127 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.5s ease;
+}
+
+.app-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.weather-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    margin: auto;
+    padding: 20px;
+}
+
+.dark-theme .weather-card {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.dark-theme body,
+.dark-theme html {
+    background: linear-gradient(135deg, #343a40, #121212);
+}
+
+h1 {
+    font-size: 24px;
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+.dark-theme h1 {
+    color: #f8f9fa;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    width: 70%;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.weather-info {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 15px;
+    color: #495057;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.weather-info p {
+    margin: 0;
+    font-size: 18px;
+}
+
+.weather-info img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.sunny {
+    background: linear-gradient(135deg, #f7b733, #fc4a1a);
+}
+
+.rainy {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+}
+
+.cloudy {
+    background: linear-gradient(135deg, #d3cce3, #e9e4f0);
+}
+
+.dark-theme .sunny,
+.dark-theme .rainy,
+.dark-theme .cloudy {
+    background: none;
+}
+
+.dark-theme .weather-info {
+    background: rgba(255, 255, 255, 0.1);
+    color: #f8f9fa;
+}
+
+@media (max-width: 600px) {
+    .weather-card {
+        width: 90%;
+    }
+
+    input[type="text"] {
+        width: 60%;
+    }
+}
